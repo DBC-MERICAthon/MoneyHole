@@ -52,6 +52,16 @@ class MoneyTossViewController: UIViewController {
         // Remotely update amount
         PFUser.currentUser()![ML_USER_AMOUNT_GIVEN_KEY] = totalMoneyTossed
         PFUser.currentUser()!.saveEventually(nil)
+        
+        // Create swipe activity for analytics
+        let swipe = PFObject(className: ML_SWIPE_CLASS_NAME)
+        swipe[ML_SWIPE_AMOUNT_IN_DOLLARS_KEY] = amount
+        swipe[ML_SWIPE_USER_KEY] = PFUser.currentUser()!
+        swipe.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+            }
+        }
+        
 
     }
     
@@ -66,10 +76,12 @@ class MoneyTossViewController: UIViewController {
     
     func throwDollar() {
         
-        let dollarImageView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
-        dollarImageView.image = UIImage(named: "dollar_sprite")
+        let dollarImageView = MLDollarImageView()
+        dollarImageView.frame = CGRectMake(0, 0, 50, 50)
         dollarImageView.center = CGPointMake(view.center.x, view.frame.size.height - 120)
         view.addSubview(dollarImageView)
+        
+        dollarImageView.startAnimating()
         
         /*
         let dollarView = UIView(frame: CGRectMake(0, 0, 40, 20))
@@ -78,7 +90,32 @@ class MoneyTossViewController: UIViewController {
         view.addSubview(dollarView)
         */
         
-       UIView.animateWithDuration(1.0, animations: { () -> Void in
+        
+        
+        var xOffset: CGFloat!
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            let rand = arc4random_uniform(200)
+            
+            
+            xOffset = CGFloat(Int(rand) - 100)
+            dollarImageView.frame.origin.x -= xOffset
+            }) { (success: Bool) -> Void in
+                
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    dollarImageView.frame.origin.x += (2 * xOffset)
+                    }, completion: { (success: Bool) -> Void in
+                    
+                        
+                        UIView.animateWithDuration(0.5, animations: { () -> Void in
+                            dollarImageView.frame.origin.x -= xOffset
+                        }, completion: nil)
+                        
+                })
+                
+                
+        }
+        
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
             dollarImageView.center.y = 50.0
         }) { (success: Bool) -> Void in
             
@@ -90,9 +127,7 @@ class MoneyTossViewController: UIViewController {
                 
                     dollarImageView.removeFromSuperview()
             }
-            
         }
-   
     }
     
     func roundToPlaces(value: CGFloat, places:Int) -> CGFloat {

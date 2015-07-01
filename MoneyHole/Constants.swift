@@ -9,3 +9,7 @@
 import Foundation
 
 let ML_USER_AMOUNT_GIVEN_KEY = "amountGiven"
+
+let ML_SWIPE_CLASS_NAME = "Swipe"
+let ML_SWIPE_AMOUNT_IN_DOLLARS_KEY = "amountInDollars"
+let ML_SWIPE_USER_KEY = "user"
