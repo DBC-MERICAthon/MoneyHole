@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MoneyHole-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MoneyHole-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MoneyHole-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MoneyHole-ParseFacebookUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MoneyHole.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1BC2866E66285B35946D490A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3504042217704BF9CF91D924</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F7FDCF72847965B9A2FF89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81889B5CC64A3BC07A40F0C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE59A5D08CBC7D08F5B034F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
