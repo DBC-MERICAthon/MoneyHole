@@ -132,17 +132,12 @@ ul {
 
 .donatetext {
 	color: white;
+	margin-bottom: 1em;
 }
 
-.donatebtn {
-	margin: 1em auto;
+form {
 	text-align: center;
 }
-
-.thebtn {
-	background-color: black;
-}	
-
 
 
 
