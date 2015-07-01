@@ -1,4 +1,14 @@
-<% @users.each do |user| %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+</head>
+
+
+<ul><% @users.each do |user| %>
 </br>
-<%= "#{user["username"]}: #{user["amountGiven"]}" %>
-<% end %>
+<li><%= "#{user["username"]}: #{user["amountGiven"]}" %></li>
+<% end %></ul>
+
+</html>
