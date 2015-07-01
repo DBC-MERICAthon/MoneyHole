@@ -23,7 +23,7 @@ $(function() {
 $(getData); function getData(){ 
   $("#usertotaldata").load("/usertotaldata"); 
   $("#usernotossdata").load("/usernotossdata");
-  $("#averagemoneyspent").load("/averagemoneyspent");
+  $("#numberofusers").load("/numberofusers");
 
   $("#totalswipes").load("/totalswipes");
   $("#averageswipes").load("/averageswipes");
@@ -32,7 +32,7 @@ $(getData); function getData(){
 
   $("#leaderboard").load("/leaderboard");
 
-setTimeout(getData,10000);
+setTimeout(getData,4000);
  }
 
 // // Non-contributing users

@@ -107,10 +107,12 @@ ul {
 #userstats {
 	float: right;
 	background-color: lightblue;
+	min-height: 1000px;
 }
 
 #swipestats {
 	background-color: pink;
+	min-height: 1000px;
 }
 
 .factoid {
@@ -138,6 +140,7 @@ ul {
 form {
 	text-align: center;
 }
+
 
 
 

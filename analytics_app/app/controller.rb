@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'parse-ruby-client'
+require_relative 'models/user'
+require_relative 'models/swipe'
 
 CLIENT = Parse.init :application_id => 'O7Y3S39SAHWoEpvXcsOL0PkVhboHm9mrAS53Y7Ux',
                     :api_key        => 'kJxlgwIxmcNO0KcxlhkdyI3aJbhzkHtK78vSFX7z'
@@ -47,19 +49,23 @@ get '/usernotossdata' do
 	erb :usernotossdata
 end
 
-get '/averagemoneyspent' do
-	erb :averagemoneyspent
+get '/numberofusers' do
+	@user_count = user_query.get.length
+	erb :numberofusers
 end
 
 get '/totalswipes' do 
+	@swipes = Swipe.total_number_of_swipes
 	erb :totalswipes
 end
 
-get '/averageswipes' do 
-	erb :averageswipes
-end
+# get '/averageswipes' do 
+# 	@average = Swipe.total_value_of_swipes
+# 	erb :averageswipes
+# end
 
 get '/swipetime' do 
+	@last_hour_swipes = Swipe.swipes_in_last_hour
 	erb :swipetime
 end
 
