@@ -4,24 +4,123 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="/style.css"
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
  </head>
 
  <body>
- <div class='jumbotron'>
- 		<h1>Pay to Pay.</h1>
- 	</div>
+ <div class='container calltoaction'>
+ 		<h1><a class='actionquote' href='#about'>Pay to Pay.</a></h1>
+ </div>
+
+<div id='about'>
+
+	<strong><h2>It's about time you found MoneyHole.</h2></strong>
+
+	<p>
+		We live in a world of expediency. We endlessly spend on that which we neither need nor want, throwing our hard earned wealth to those who provide us with 'entertainment' and 'functionality'. Kim Kardashian alone makes millions off of an app in we users must pay to become wealthy and famous in the virtual life, whilst becoming destitute and poor in reality. A wicked existence indeed.
+	</p>
+<br>
+	<p>
+		With Moneyhole, bypass the bullshit and give us your money directly. Compete against your friends to see who can toss the most cash. Indulge in the thrill of gliding your finger across that fancy new iPhone. Gone are the days of incentivized, candy-laden kiddy games. Show the world that you don't pay to play. You pay to pay.
+	<p>
+	<button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+	  <a href="#leaderboard_intro" ><span class="glyphicon glyphicon-chevron-down down_arrow"</span></a>
+	</button>
+
+</div>
+
+<div id='leaderboard_intro'>
+		<h2>The Devil's in the Details.</h2>
+
+		<p>
+			We pride ourselves on our unabashed honesty. With MoneyHole, you know exactly what you're doing, and you know how many others are doing it. Share the joy of wasting money with your friends and family, and relish in the fact that others are doing the same here as you view the data.
+		</p>
+
+		<button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+		  <a href="#userstats" ><span class="glyphicon glyphicon-chevron-down down_arrow"</span></a>
+		</button>
+</div>
 
 
-	<p>We live in a world of expediency. We endlessly spend on that which we do not need or want, throwing our hard earned wealth to those who provide us with 'entertainment' and 'functionality'. Kim Kardashian alone makes millions off of an app in which users must pay to become wealthy and famous in the virtual life, while becoming destitute and poor in reality. A wicked existence indeed.</p>
+<div id='stats'>
 
-	<p>Escape the follies of pay to play, and just pay. At Moneyhole, you can bypass. the bullshit and cut right to the chase: give us your money, show the world that you don't give a damn.<p>
+	<div id='userstats'>
+		<h3>Swipes</h3>
+		<div class="factoid">
+			<p>Users have spent</p> 
+			<div id="bignum">$763.72</div>
+			<p>dollars total on MoneyHole</p>
+		</div>
 
- 			<% @users.each do |user| %>
-				<p><%= "#{user["username"]}: #{user["amountGiven"]}" %></p>
-			<% end %>
+		<div class="factoid">
+			<p>Users have spent</p> 
+			<div id="bignum">$763.72</div>
+			<p>dollars total on MoneyHole</p>
+		</div>
+
+		<div class="factoid">
+			<p>Users have spent</p> 
+			<div id="bignum">$763.72</div>
+			<p>dollars total on MoneyHole</p>
+		</div>
+
+
+	</div>
+
+	<div id='swipestats'>
+		<h3>Users</h3>
+			<div class="factoid">
+				<p>Users have spent</p> 
+				<div id="bignum">$763.72</div>
+				<p>dollars total on MoneyHole</p>
+			</div>
+
+			<div class="factoid">
+				<p>Users have spent</p> 
+				<div id="bignum">$763.72</div>
+				<p>dollars total on MoneyHole</p>
+			</div>
+
+			<div class="factoid">
+				<p>Users have spent</p> 
+				<div id="bignum">$763.72</div>
+				<p>dollars total on MoneyHole</p>
+			</div>
+	</div>
+
+</div>
+
+<div id="#metrics">
+<h2>The LeaderBoard</h2>
+
+	<% @users.each_with_index do |user, idx| %>
+		<p style="font-size: <%= "#{100-(idx*10)}" %>px;"><%= "#{user["username"]}: $#{user["amountGiven"]}" %></p>
+	<% end %>
+<br>
+</div>
+
+<div id="donate">
+	<h2>Donate to the Cuase</h2>
+		<p class='donatetext'>
+			Without your support and continued use, MoneyHole would not be what it is today. Keep this train rolling and donate. Expect nothing in return.
+		</p>
+
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class='donatebtn'>
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="RE3G5FQR98WNQ">
+			<input type="button" class='thebtn' name="submit" value="Just do it.">
+		</form>
+
+
+	</div>	
+
 
 
  </body>
 
-
+<script src="/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/style.js"></script>

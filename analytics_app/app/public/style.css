@@ -1,16 +1,162 @@
+h1,h2,h3,p,#bignum { 
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.btn {
+	border: none;
+	box-shadow: none;
+	background-image: none;
+	background-color: rgba(0,0,0,0);
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+	background-color: rgba(0,0,0,0);
+	opacity: 0.7;
+}
+
+.down_arrow, .down_arrow:visited {
+	color: black;
+}
+
+.down_arrow:focus {
+	background-color: rgba(0,0,0,0);
+}
+
+#bignum {
+	font-weight: 700;
+	font-size: 4em;
+	margin: 0.4em, auto;
+}
+
+.actionquote, .actionquote:visited {
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	margin-top: 0.5em;
+	text-decoration: none;
+	transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+	-webkit-transition: color .25s ease-in-out;
+}
+
+.actionquote:hover, .actionquote:focus {
+	color: black;
+	text-decoration: none;
+}
+
 h1 {
 	text-align: center;
+}
+
+h2 {
+	text-align: center;
 	font-size: 4em;
+	margin-bottom: 2em;
+	padding-top: 5em;
+	font-weight: 600;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 3em;
 }
 
 p {
 	text-align: center;
-	font-size: 1em;
-	max-width: 600px;
+	font-size: 1.5em;
+	max-width: 1000px;
 	margin: auto auto;
+	color: black;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 
 ul {
 	text-align: center;
 	list-style: none;
 }
+
+.calltoaction {
+	padding-bottom: 60em;
+	background-image: url('images/logo.png');
+	background-position: top;
+	width: 100%;
+}
+
+#about {
+	margin-top: 3em;
+	margin-bottom: 25em;
+}
+
+#leaderboard_intro {
+	background-color: #97E475;
+	padding-bottom: 25em;
+	text-align: center;
+}
+
+#userstats, #swipestats {
+	width: 50%;
+	text-align: center;
+	padding-top: 6em;
+	padding-bottom: 6em;
+}
+
+#userstats {
+	float: right;
+	background-color: lightblue;
+}
+
+#swipestats {
+	background-color: pink;
+}
+
+.factoid {
+	margin: 6em;
+}
+
+#donate {
+	padding-bottom: 25em;
+	background-image: url('/images/hole.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	min-height: 500px;
+/*	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+	color: white;
+}
+
+.donatetext {
+	color: white;
+}
+
+.donatebtn {
+	margin: 1em auto;
+	text-align: center;
+}
+
+.thebtn {
+	background-color: black;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
