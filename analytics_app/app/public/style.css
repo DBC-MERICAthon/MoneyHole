@@ -1,4 +1,4 @@
-h1,h2,h3,p,#bignum { 
+h1,h2,h3,p,.bignum { 
 	font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -25,7 +25,7 @@ h1,h2,h3,p,#bignum {
 	background-color: rgba(0,0,0,0);
 }
 
-#bignum {
+.bignum {
 	font-weight: 700;
 	font-size: 4em;
 	margin: 0.4em, auto;
