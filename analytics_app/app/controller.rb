@@ -8,7 +8,6 @@ CLIENT = Parse.init :application_id => 'O7Y3S39SAHWoEpvXcsOL0PkVhboHm9mrAS53Y7Ux
 
 user_query = Parse::Query.new('_User')
 
-
 def user_query
 	Parse::Query.new('_User')
 end
