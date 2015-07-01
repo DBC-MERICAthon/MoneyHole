@@ -34,5 +34,3 @@ class User
   end
 
 end
-
-puts User.average_user_toss
