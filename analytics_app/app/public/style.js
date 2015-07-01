@@ -19,7 +19,6 @@ $(function() {
 
 // ConstantQuery
 
-// User total
 $(getData); function getData(){ 
   $("#usertotaldata").load("/usertotaldata"); 
   $("#usernotossdata").load("/usernotossdata");
@@ -32,7 +31,7 @@ $(getData); function getData(){
 
   $("#leaderboard").load("/leaderboard");
 
-setTimeout(getData,4000);
+setTimeout(getData,3000);
  }
 
 // // Non-contributing users
