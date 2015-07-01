@@ -1,0 +1,16 @@
+h1 {
+	text-align: center;
+	font-size: 4em;
+}
+
+p {
+	text-align: center;
+	font-size: 1em;
+	max-width: 600px;
+	margin: auto auto;
+}
+
+ul {
+	text-align: center;
+	list-style: none;
+}

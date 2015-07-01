@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+ <head>
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/style.css"
+ </head>
 
-<head>
-	
-</head>
+ <body>
+ <div class='jumbotron'>
+ 		<h1>Pay to Pay.</h1>
+ 	</div>
 
 
-<ul><% @users.each do |user| %>
-</br>
-<li><%= "#{user["username"]}: #{user["amountGiven"]}" %></li>
-<% end %></ul>
+	<p>We live in a world of expediency. We endlessly spend on that which we do not need or want, throwing our hard earned wealth to those who provide us with 'entertainment' and 'functionality'. Kim Kardashian alone makes millions off of an app in which users must pay to become wealthy and famous in the virtual life, while becoming destitute and poor in reality. A wicked existence indeed.</p>
 
-</html>
+	<p>Escape the follies of pay to play, and just pay. At Moneyhole, you can bypass. the bullshit and cut right to the chase: give us your money, show the world that you don't give a damn.<p>
+
+ 			<% @users.each do |user| %>
+				<p><%= "#{user["username"]}: #{user["amountGiven"]}" %></p>
+			<% end %>
+
+
+ </body>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
