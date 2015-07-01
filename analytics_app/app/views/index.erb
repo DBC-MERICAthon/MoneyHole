@@ -50,21 +50,21 @@
 	<div id='userstats'>
 		<h3>Swipes</h3>
 		<div class="factoid">
-			<p>Users have spent</p> 
-			<div id="bignum">$763.72</div>
-			<p>dollars total on MoneyHole</p>
+			<p>To Date, we have seen</p> 
+			<div class="bignum" id="totalswipes">0</div>
+			<p>total swipes with MoneyHole</p>
 		</div>
 
 		<div class="factoid">
-			<p>Users have spent</p> 
-			<div id="bignum">$763.72</div>
-			<p>dollars total on MoneyHole</p>
+			<p>Users perform an average of</p> 
+			<div class="bignum" id="averageswipes">$763.72</div>
+			<p>swipes per day</p>
 		</div>
 
 		<div class="factoid">
-			<p>Users have spent</p> 
-			<div id="bignum">$763.72</div>
-			<p>dollars total on MoneyHole</p>
+			<p>Users get roudy around the hours of:</p> 
+			<div class="bignum" id="swipetime">$763.72</div>
+			<p>The swipes be plentiful.</p>
 		</div>
 
 
@@ -74,20 +74,20 @@
 		<h3>Users</h3>
 			<div class="factoid">
 				<p>Users have spent</p> 
-				<div id="bignum">$763.72</div>
+				<div class="bignum" id="usertotaldata">0</div>
 				<p>dollars total on MoneyHole</p>
 			</div>
 
 			<div class="factoid">
-				<p>Users have spent</p> 
-				<div id="bignum">$763.72</div>
-				<p>dollars total on MoneyHole</p>
+				<p>On average, users have tossed</p> 
+				<div class="bignum" id="averagemoneyspent">$763.72</div>
+				<p>per day.</p>
 			</div>
 
 			<div class="factoid">
-				<p>Users have spent</p> 
-				<div id="bignum">$763.72</div>
-				<p>dollars total on MoneyHole</p>
+				<p>As it stands,</p> 
+				<div class="bignum" id="usernotossdata">0</div>
+				<p>users have refused to pay</p>
 			</div>
 	</div>
 
@@ -96,9 +96,9 @@
 <div id="#metrics">
 <h2>The LeaderBoard</h2>
 
-	<% @users.each_with_index do |user, idx| %>
-		<p style="font-size: <%= "#{600/(idx+1*10)}" %>px;"><%= "#{user["username"]}: $#{user["amountGiven"]}" %></p>
-	<% end %>
+	<div id="leaderboard">
+		0
+	</div>
 <br>
 </div>
 
